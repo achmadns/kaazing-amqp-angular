@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Required for IE6/IE7 cross-origin support -->
+    <meta name="kaazing:postMessageBridgeURL" content="PostMessageBridge.html">
+    <title>AngularJS Try Out</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css.map">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css.map">
+    <script src="lib/kaazing-amqp-0-9-1-client-javascript/javascript/PostMessage-debug.js"></script>
+    <script src="lib/kaazing-amqp-0-9-1-client-javascript/javascript/WebSocket-debug.js"></script>
+    <script src="lib/kaazing-amqp-0-9-1-client-javascript/javascript/Amqp-0-9-1-debug.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-smart-table/dist/smart-table.js"></script>
+</head>
+<body ng-controller="home">
+<h2>Kaazing AMPQ 0.9.1 Angular Module Demo</h2>
+
+<form role="form" ng-submit="send()">
+    <div class="form-group">
+        <label for="username">Name:</label>
+        <input type="text" class="form-control" id="username" name="username" ng-model="person.name"/>
+    </div>
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" class="form-control" id="age" name="age" ng-model="person.age"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+<label>Person count: {{displayedCollection.length}}</label>
+
+<div id="table-wrapper">
+    <div id="table-scroll">
+        <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in displayedCollection">
+                <td>{{row.name}}</td>
+                <td>{{row.age}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="amqp.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

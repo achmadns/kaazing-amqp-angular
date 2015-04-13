@@ -1,0 +1,13 @@
+{
+    "name": "kaazing-amqp-angular",
+    "description": "Kaazing AMPQ 0.9.1 Angular Module",
+    "version": "0.1.0",
+    "homepage": "https://github.com/achmadns/kaazing-amqp-angular",
+    "license": "MIT",
+    "dependencies": {
+        "bootstrap": "^3.x",
+        "angular-bootstrap":"0.11.2",
+        "angular-smart-table": "1.4.12",
+        "kaazing-amqp-0-9-1-client-javascript": "5.0.0-14"
+    }
+}

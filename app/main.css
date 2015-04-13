@@ -1,0 +1,26 @@
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+.navbar .pull-right {
+    margin: 15px;
+}
+
+body { padding: 20px; }
+.my-class .modal-body {
+    background-color: #eee;
+}
+
+#table-wrapper {
+    position:relative;
+}
+#table-scroll {
+    height:200px;
+    overflow:auto;
+    margin-top:20px;
+}
+#table-wrapper table {
+    width:100%;
+}
+#table-wrapper thead th .text {
+    position:absolute;
+}
