@@ -2,7 +2,7 @@
 
 Before trying out this project, make sure you have these tools on your machine:
 
-- Local [Kazzing](http://kaazing.org) instance up.
+- Local [Kaazing](http://kaazing.org) instance up.
 
 - Bundler, `gem install bundler`.
 
