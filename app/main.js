@@ -2,7 +2,7 @@
 angular.module('app', ['amqp-091', 'smart-table', 'ui.bootstrap'])
     .controller('home', function ($rootScope, $scope, $http, amqpUtil, amqp) {
         var amqpConfig = {
-            url: 'ws://localhost:8000/amqp',
+            url: 'wss://sandbox.kaazing.net/amqp091',
             virtualHost: '/',
             credentials: {
                 username: 'guest',
