@@ -7,11 +7,7 @@
     "postinstall": "bower install",
     "start": "cd app; http-server -p 8001",
     "pretest": "npm install",
-    "test": "karma start conf.karma.js --single-run",
-    "preupdate-webdriver": "npm install",
-    "update-webdriver": "webdriver-manager update",
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor conf.protractor.js"
+    "test": "intern-runner config=test/intern"
   },
   "engines": {
     "node": ">=0.10.20"
@@ -29,6 +25,7 @@
     "karma-junit-reporter": "^0.2.2",
     "karma-mocha": "^0.1.10",
     "mocha": "^2.2.5",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.2.6",
+    "webdriver-manager": "^5.2.0"
   }
 }

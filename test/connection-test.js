@@ -11,16 +11,16 @@ describe('Connection Test', function(){
 		routingKey: 'person'
 	};
 	beforeEach(module('amqp-091'));
+	afterEach(function(){
+    	inject(function($rootScope){
+    		$rootScope.$apply();
+    	});
+	});
 	it('Should connect successfuly',function(done){
 		this.timeout(10000);
 		inject(function($rootScope, $timeout, amqp, amqpUtil, AMQP_CONNECTED){
 			$rootScope.$on(AMQP_CONNECTED, function () {
-				// done();
-				$rootScope.$apply();
-				$rootScope.$digest();
-            });
-	        amqp.connect(amqpConfig).then(function () {
-	        	console.log("Opening channel...");
+				console.log("On global event amqp connected.");
 	            amqp.client.openChannel(function (channel) {
 	                channel.addEventListener('message', function (event) {
 	                    var body = amqpUtil.getBodyAsString(event);
@@ -28,6 +28,8 @@ describe('Connection Test', function(){
 	    	                deliveryTag: event.args.deliveryTag,
 	                        multiple: true
 	                    });
+	                    console.log("Message" + angular.fromJson(body));
+                		done();
 	                });
 	                channel
 	                    .declareQueue({queue: amqpConfig.queue, durable: true})
@@ -36,15 +38,19 @@ describe('Connection Test', function(){
 	                console.log('Channel initialized!');
 	            });
 	            amqp.client.openChannel(function (channel) {
-	                channel.publishBasic({body: body, properties: props, exchange: amqpConfig.exchange, routingKey: amqpConfig.routingKey});
+	                channel.publishBasic({body: angular.toJson({name:'achmad',age:26}),
+	                properties: props, exchange: amqpConfig.exchange, routingKey: amqpConfig.routingKey});
+	                console.log("Message sent...");
 	            });
-                done();
+            });
+	        amqp.connect(amqpConfig).then(function () {
+	        	console.log("After connect...");
 	        	}, function () {
-	        		throw "Not Connected";
+	        		// throw "Not Connected";
 	    	});
 			$timeout.flush();
-				$rootScope.$apply();
-				$rootScope.$digest();
+			$rootScope.$apply();
+			$rootScope.$digest();
 		});
 		console.log("Waiting for connection.");
 	});
