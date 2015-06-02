@@ -1,0 +1,69 @@
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ karma start
+INFO [karma]: Karma v0.12.33 server started at http://localhost:9876/
+INFO [launcher]: Starting browser Chrome
+INFO [Chromium 34.0.1847 (Ubuntu)]: Connected on socket 95xTqYoNu10wduyjps67 with id 98932491
+LOG: 'Connecting'
+LOG: 'Waiting for connection.'
+LOG: 'Amqp connected'
+ERROR: 'message event handler: Error thrown from application'
+Chromium 34.0.1847 (Ubuntu) Connection Test Should connect successfuly FAILED
+	Error: timeout of 10000ms exceeded. Ensure the done() callback is being called in this test.
+Chromium 34.0.1847 (Ubuntu): Executed 2 of 2 (1 FAILED) (10.032 secs / 10.002 secs)
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ karma start
+INFO [karma]: Karma v0.12.33 server started at http://localhost:9876/
+INFO [launcher]: Starting browser Chrome
+INFO [Chromium 34.0.1847 (Ubuntu)]: Connected on socket jl-8XLLzGL4O6gjBp3JK with id 34708542
+LOG: 'Connecting'
+LOG: 'Waiting for connection.'
+LOG: 'Amqp connected'
+LOG: 'Broadcasted'
+LOG: 'Deferred resolved'
+Chromium 34.0.1847 (Ubuntu) Connection Test Should connect successfuly FAILED
+	Error: timeout of 10000ms exceeded. Ensure the done() callback is being called in this test.
+Chromium 34.0.1847 (Ubuntu): Executed 2 of 2 (1 FAILED) (10.029 secs / 10.002 secs)
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ karma start
+INFO [karma]: Karma v0.12.33 server started at http://localhost:9876/
+INFO [launcher]: Starting browser Chrome
+INFO [Chromium 34.0.1847 (Ubuntu)]: Connected on socket ENIaQskKJ-TfUIL0p96C with id 10799790
+LOG: 'Connecting'
+LOG: 'Waiting for connection.'
+LOG: 'Amqp connected'
+LOG: 'Broadcasted'
+LOG: 'Deferred resolved'
+Chromium 34.0.1847 (Ubuntu) Connection Test Should connect successfuly FAILED
+	Error: timeout of 10000ms exceeded. Ensure the done() callback is being called in this test.
+Chromium 34.0.1847 (Ubuntu): Executed 2 of 2 (1 FAILED) (10.03 secs / 10.002 secs)
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ karma start
+INFO [karma]: Karma v0.12.33 server started at http://localhost:9876/
+INFO [launcher]: Starting browser PhantomJS
+INFO [PhantomJS 1.9.8 (Linux)]: Connected on socket nPKiiAlRJsvA0M8eqNDn with id 45294721
+LOG: 'Connecting'
+LOG: 'Waiting for connection.'
+LOG: 'Amqp disconnected'
+ERROR: 'close event handler: Error thrown from application'
+PhantomJS 1.9.8 (Linux) Connection Test Should connect successfuly FAILED
+	timeout of 10000ms exceeded. Ensure the done() callback is being called in this test.
+PhantomJS 1.9.8 (Linux): Executed 2 of 2 (1 FAILED) (10.016 secs / 10.005 secs)
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ karma start
+INFO [karma]: Karma v0.12.33 server started at http://localhost:9876/
+INFO [launcher]: Starting browser PhantomJS
+INFO [PhantomJS 1.9.8 (Linux)]: Connected on socket wRvwNgMwvyGd9uGmqRMK with id 90684983
+LOG: 'Connecting'
+LOG: 'Waiting for connection.'
+LOG: 'Amqp disconnected'
+ERROR: 'close event handler: Error thrown from application'
+PhantomJS 1.9.8 (Linux) Connection Test Should connect successfuly FAILED
+	timeout of 10000ms exceeded. Ensure the done() callback is being called in this test.
+PhantomJS 1.9.8 (Linux): Executed 2 of 2 (1 FAILED) (10.018 secs / 10.006 secs)
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ karma start
+INFO [karma]: Karma v0.12.33 server started at http://localhost:9876/
+INFO [launcher]: Starting browser PhantomJS
+INFO [PhantomJS 1.9.8 (Linux)]: Connected on socket tZ858dq7syqv3hqdqVuS with id 75739878
+LOG: 'Connecting'
+LOG: 'Waiting for connection.'
+LOG: 'Amqp disconnected'
+ERROR: 'close event handler: Error thrown from application'
+PhantomJS 1.9.8 (Linux) Connection Test Should connect successfuly FAILED
+	timeout of 10000ms exceeded. Ensure the done() callback is being called in this test.
+PhantomJS 1.9.8 (Linux): Executed 2 of 2 (1 FAILED) (10.019 secs / 10.004 secs)
+anantya.wibowo@moi-laptop-2:~/oss/kaazing-amqp-angular$ 
