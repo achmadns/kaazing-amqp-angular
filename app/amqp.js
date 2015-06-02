@@ -47,7 +47,7 @@ angular.module('amqp-091', [])
         amqpClientFactory.setWebSocketFactory(webSocketFactory);
         return  amqpClientFactory;
     })
-    .service('amqp', function ($rootScope, amqpClientFactory, $q, AMQP_DISCONNECTED, AMQP_CONNECTED, AMQP_ERROR) {
+    .service('amqp', function ($rootScope, $timeout, amqpClientFactory, $q, AMQP_DISCONNECTED, AMQP_CONNECTED, AMQP_ERROR) {
         var DISCONNECTING = 'DISCONNECTING', DISCONNECTED = 'DISCONNECTED', CONNECTING = 'CONNECTING', CONNECTED = 'CONNECTED';
         var status = DISCONNECTED;
         var amqpClient = amqpClientFactory.createAmqpClient();
@@ -62,10 +62,11 @@ angular.module('amqp-091', [])
         return {
             client: amqpClient,
             connect: function (amqpConfig) {
+                console.log("Connecting");
                 var deferred = $q.defer();
                 var promise = deferred.promise;
                 if (CONNECTED == status) {
-                    setTimeout(function () {
+                    $timeout(function () {
                         deferred.resolve();
                     }, 0);
                     return promise;
@@ -85,12 +86,14 @@ angular.module('amqp-091', [])
                     return promise;
                 }
                 status = CONNECTING;
-                setTimeout(function () {
+                $timeout(function () {
                     amqpClient.connect(amqpConfig, function () {
                         status = CONNECTED;
                         console.log('Amqp connected');
                         $rootScope.$broadcast(AMQP_CONNECTED, amqpClient);
+                        console.log('Broadcasted');
                         deferred.resolve();
+                        console.log('Deferred resolved');
                     });
                 }, 0);
                 return promise;
@@ -99,7 +102,7 @@ angular.module('amqp-091', [])
                 var deferred = $q.defer();
                 var promise = deferred.promise;
                 if (DISCONNECTED == status) {
-                    setTimeout(function () {
+                    $timeout(function () {
                         deferred.resolve();
                     }, 0);
                     return promise;
@@ -118,7 +121,7 @@ angular.module('amqp-091', [])
                     });
                 }
                 status = DISCONNECTING;
-                setTimeout(function () {
+                $timeout(function () {
                     amqpClient.disconnect();
                     status = DISCONNECTED;
                     $rootScope.$broadcast(AMQP_DISCONNECTED);

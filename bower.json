@@ -4,7 +4,14 @@
     "version": "0.1.0",
     "homepage": "https://github.com/achmadns/kaazing-amqp-angular",
     "license": "MIT",
-    "dependencies": {
+    "authors": [
+        "Achmad Nasirudin Sandi <achmadnsandi@gmail.com> (http://achmad.in)"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/foo/bar.git"
+      },
+      "dependencies": {
         "bootstrap": "^3.x",
         "angular-bootstrap":"0.11.2",
         "angular-smart-table": "1.4.12",
