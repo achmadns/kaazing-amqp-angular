@@ -27,7 +27,10 @@ I use grunt to setup livereload and provide `connect` module to serve the page.
 Run `npm install` to resolve all tools needed. 
 I still failed to make karma test working due to my lack of knowledge regarding unit test of promise on angular.
 
-To develop with livereload, run 'grunt' to start the `connect` server on [localhost:9009](http://localhost:9009) and start edit your files under `app` folder.
+To develop with livereload, run `grunt` to start the `connect` server on [localhost:9009](http://localhost:9009) and 
+install `livereload` [addons/ extension](http://livereload.com/extensions/) for your favourite browser. 
+Don't forget to push the livereload button (usually located on right top and it mimick refresh button) on your browser to be notified by `grunt watch` whenever there is file changed on `app` folder.
+Start edit your files under `app` folder and browser should be refreshed automatically.
 
 To run functional test:
 
