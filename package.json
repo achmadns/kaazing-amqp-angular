@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "npm install",
     "postinstall": "bower install",
-    "start": "cd app; http-server -p 8001",
+    "start": "grunt",
     "pretest": "npm install",
     "test": "intern-runner config=test/intern"
   },
