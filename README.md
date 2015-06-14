@@ -1,5 +1,11 @@
 # AngularJS module for Kaazing AMQP 0.9.1 Gateway
 
+## Online demo
+
+Open [http://achmadns.github.io/kaazing-amqp-angular](http://achmadns.github.io/kaazing-amqp-angular).
+
+## Trying locally
+
 Make sure you have these tools before trying out:
 
 - Npm, node package manager. Thanks to [nvm](https://github.com/creationix/nvm) to make `nodejs` installation easier.
