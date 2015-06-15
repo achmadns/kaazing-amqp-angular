@@ -48,6 +48,5 @@ crashlytics.properties
 crashlytics-build.properties
 node_modules
 app/lib
-Gemfile.lock
 
 
