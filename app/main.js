@@ -11,7 +11,7 @@ angular.module('app', ['amqp-091', 'smart-table', 'ui.bootstrap'])
             },
             exchange: 'amq.topic',
             queue: 'amqp-test-' + id,
-            routingKey: 'person-' + id
+            routingKey: 'person-test'
         };
         $scope.person = {
             name: 'anonymous', age: 25
